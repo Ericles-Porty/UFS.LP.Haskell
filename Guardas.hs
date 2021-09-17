@@ -21,9 +21,9 @@ parOuImpar num
 --Escreva uma função que retorne uma mensagem dizendo se um número é múltiplo de algum dos números 2, 3, 5 ou de nenhum deles.
 multiplos :: Int -> IO ()
 multiplos x
-  | x `mod` 2 == 0 = putStrLn "Multiplo de 2"
-  | x `mod` 3 == 0 = putStrLn "Multiplo de 3"
-  | x `mod` 5 == 0 = putStrLn "Multiplo de 5"
+  | mod x 2 == 0 = putStrLn "Multiplo de 2"
+  | mod x 3 == 0 = putStrLn "Multiplo de 3"
+  | mod x 5 == 0 = putStrLn "Multiplo de 5"
   | otherwise = putStrLn "Nao e multiplo de 2, 3 ou 5"
 
 --Escreva uma função que receba 3 números inteiros e exiba o maior deles.
