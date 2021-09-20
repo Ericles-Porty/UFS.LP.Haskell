@@ -15,6 +15,10 @@ fib x = fib (x - 1) + fib (x - 2)
 somatorio :: Int -> Int
 somatorio n = sum [1 .. n]
 
+somatorioRec :: Int -> Int
+somatorioRec 1 = 1
+somatorioRec n = n + somatorioRec (n-1)
+
 --Uma função que receba 3 números inteiros e informe se eles são iguais.
 comparaTres :: Int -> Int -> Int -> IO ()
 comparaTres a b c = if a == b && b == c then putStrLn "Iguais" else putStrLn "Diferentes"

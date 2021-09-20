@@ -18,6 +18,11 @@ parOuImpar num
     |num `mod` 2 == 0 = "Par"
     |num `mod` 2 == 1 = "Impar"-}
 
+{-parOuImpar :: Int -> String
+parOuImpar num
+  |mod num 2 == 0 = "Par"
+  |mod num 2 == 1 = "Impar"-}
+  
 --Escreva uma função que retorne uma mensagem dizendo se um número é múltiplo de algum dos números 2, 3, 5 ou de nenhum deles.
 multiplos :: Int -> IO ()
 multiplos x
