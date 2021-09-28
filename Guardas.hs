@@ -40,9 +40,9 @@ maiorDeTres a b c
 
 --Usando as funções criadas nos exercícios anteriores crie uma função que receba três números e retorne um string informando o tipo de triângulo formado (obs: o triângulo formado pode ser equilátero, isósceles ou escaleno).
 
-qualTriangulo :: Int -> Int -> Int -> IO ()
+qualTriangulo :: Int -> Int -> Int -> String
 qualTriangulo a b c
-  | formaTriangulo a b c && formaTrianguloEscaleno a b c = putStrLn "Escaleno!"
-  | formaTriangulo a b c && formaTrianguloEquilatero a b c = putStrLn "Equilatero!"
-  | formaTriangulo a b c && formaTrianguloIsoceles a b c = putStrLn "Isoceles!"
-  | otherwise = putStrLn "Nao forma triangulo!"
+  | formaTriangulo a b c && formaTrianguloEscaleno a b c =  "Escaleno!"
+  | formaTriangulo a b c && formaTrianguloEquilatero a b c =  "Equilatero!"
+  | formaTriangulo a b c && formaTrianguloIsoceles a b c =  "Isoceles!"
+  | otherwise =  "Nao forma triangulo!"
