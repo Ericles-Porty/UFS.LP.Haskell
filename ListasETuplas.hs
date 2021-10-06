@@ -70,6 +70,13 @@ listQuadrada :: [Int]
 listQuadrada = [x ^ 2 | x <- [3 .. 50], mod x 3 == 0]
 
 --Exiba tuplas com as possíveis combinações entre as letras de um string lido e os números de 1 a 5, como no exemplo a seguir:
+parteLista :: Char -> [Int] -> [(Char, Int)]
+parteLista _ [] = []
+parteLista x (a:bs) = (x, a): parteLista x bs
+
+combinaListas :: String -> [[(Char, Int)]]
+combinaListas [] = []
+combinaListas (x:xs) = parteLista x [1..5]: combinaListas xs
 
 --Usando list comprehension crie uma função que exiba todos os múltiplos de 3 entre naturais menores que 100.
 listTripleNatural :: [Int]
